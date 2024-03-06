@@ -4,6 +4,14 @@ const bcrypt = require('bcrypt-nodejs');
 const cors = require('cors');
 const knex = require('knex')
 
+/* TASK
+# Route # /                   --> res  --> [return] : this is working
+# Route # /signIn             --> POST --> [return] : success / fail
+# Route # /register           --> POST --> [return] : user
+# Route # /profile/:userId    --> GET  --> [return] : user
+# Route # /image              --> PUT  --> [return] : user
+*/
+
 const db = knex({
   // Enter your own database information here based on what you created
   client: 'pg',
