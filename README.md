@@ -1,4 +1,4 @@
-# SmartBrain-api - v1
+# SmartBrain-api - v1 (Back-End)
 Final project for ZTM course
 
 1. Clone this repo
