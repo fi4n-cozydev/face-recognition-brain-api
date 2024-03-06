@@ -25,6 +25,7 @@ app.use(express.json()); // latest version of exressJS now comes with Body-Parse
 //   res.send(database.users);
 // })
 
+//*SIGN-IN
 app.post('/signin', (req, res) => {
   db.select('email', 'hash').from('login')
     .where('email', '=', req.body.email)
@@ -44,6 +45,7 @@ app.post('/signin', (req, res) => {
     .catch(err => res.status(400).json('wrong credentials'))
 })
 
+//*REGISTER
 app.post('/register', (req, res) => {
   const { email, name, password } = req.body;
   const hash = bcrypt.hashSync(password);
