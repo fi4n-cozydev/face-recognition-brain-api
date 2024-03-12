@@ -17,11 +17,16 @@ const db = knex({
   client: 'pg',
   connection: {
     host : '127.0.0.1',
-    user : 'aneagoie',
+    user : 'postgres',
     password : '',
     database : 'smart-brain'
   }
 });
+
+// db.select('*').from('users')
+//   .then(data => {
+//     console.log(data);
+// });
 
 const app = express();
 
